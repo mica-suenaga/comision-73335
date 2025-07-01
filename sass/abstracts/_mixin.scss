@@ -1,0 +1,34 @@
+//mixin con parametros
+@mixin grid ($grid, $row, $column){
+    display: $grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+}
+
+//mixin sin parametros
+@mixin flex{
+    display: flex; /*modificar su posicionamiento, el header en fila queda*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+//mixin con parametros y estilos fijos
+@mixin estilos-header-div-nav ($color){
+    display: flex; /* FUNCIONA PARA LOS CONTENEDORES*/
+    color: ($color);
+    list-style: none;
+    gap: 50px;
+    margin-left: 500px;
+    margin-top: 80px; /*para achicar el espacio de abajo y quede al raz*/
+    font-size: 20px;
+}
+
+@mixin h2 ($color){
+    margin: 200px;
+    margin-top: 75px;
+    margin-bottom: 0%;
+    color: ($color);
+    font-size: 30px;
+}

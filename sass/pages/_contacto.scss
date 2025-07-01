@@ -1,0 +1,60 @@
+//variables
+@import "../abstracts/variables";
+//mixin
+@import "../abstracts/mixin";
+
+header{
+    color: $color-banner;
+    @include flex;
+    padding-right: 30px;/*con este le doy espacio internamente, no usando margin*/
+    .banner{
+        color: $color-titulosysub;
+        margin-left: 200px;
+        margin-top: 45px;
+        margin-bottom: 1%;
+    }
+    nav {
+        @include estilos-header-div-nav ($color-titulosysub);
+    }
+}
+
+main{
+    @include h2 ($color-tipografia);
+    .grid-dos-columnas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;      /* dos columnas iguales */
+        grid-template-rows: repeat(3, auto); /* tres filas */
+        gap: 50px;
+        margin-top: 45px;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-bottom: 150px;
+        color: $color-textos;
+        text-align: justify;
+    }
+    /* deco para los textos */
+    .item {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 8px;
+        }
+
+    /* Foto de mapa que ocupa las 3 filas */
+.imagen {
+  grid-row: 1 / span 3; /* ocupa 3 filas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Celdas vacías para mantener la estructura */
+.invisible {
+  display: none;
+}
+}

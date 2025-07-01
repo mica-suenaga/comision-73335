@@ -1,0 +1,60 @@
+//variables
+@import "../abstracts/variables";
+//mixin
+@import "../abstracts/mixin";
+
+header{
+    color: $color-banner;
+    @include flex;
+    padding-right: 30px;/*con este le doy espacio internamente, no usando margin*/
+    .banner{
+        color: $color-titulosysub;
+        margin-left: 200px;
+        margin-top: 45px;
+        margin-bottom: 1%;
+    }
+    nav {
+        @include estilos-header-div-nav ($color-titulosysub);
+    }
+}
+
+main{
+    display: flex; /*FUNCIONA PARA LOS CONTENEDORES*/
+    justify-content: left;
+    flex-wrap: wrap; /*que se adapte a estar en la misma linea o pase a columna si es necesario p mobile*/
+    background-color: $color-banner;
+    align-items: center;
+    .contenido{
+        color: $color-tipografia;
+        font-size: 21px;
+        gap: 5%;
+        padding: 1%;
+        /*justify-content: center;*/
+    }
+    .introduccion{
+        margin-top: 80px;
+        margin-bottom: 90px;
+        margin-left: 200px;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+    .fotointro{
+        display: grid;
+        width: 40%;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0px;
+        
+    }
+}
+
+footer{
+    color: $color-titulosysub;
+    font-size: 15px;
+    margin: 100px;
+    margin-bottom: 1%;
+    margin-top: 3%;
+    text-align:center;
+}
+

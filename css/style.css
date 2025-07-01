@@ -1,119 +1,124 @@
+@charset "UTF-8";
 /* selector + propiedad + valor
 
 selector {
 propiedad: valor
 }
-
+reset
 */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
-
-/* poner deco al header / titulo MS Estudio Juridico*/
-
-header{
-    background-color: #ddd9d9;
-    display: flex; /*modificar su posicionamiento, el header en fila queda*/
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 30px;/*con este le doy espacio internamente, no usando margin*/
-    
+/*estilos generales*/
+header {
+  background-color: #ddd9d9;
 }
 
-.banner {
-    margin-left: 200px;
-    margin-top: 45px;
-    margin-bottom: 1%;
-    color: rgba(61, 13, 132, 0.736);
-    display: flex
-    
+main {
+  background-color: antiquewhite;
 }
 
-
-
-/* poner deco a los subtitulos: Home, Servicios, Contacto - despues ver como hacer para que entre home, servicios y contacto quede un espacio */
-header div nav {
-    display: flex; /* FUNCIONA PARA LOS CONTENEDORES*/
-    color: rgba(61, 13, 132, 0.736);
-    list-style: none;
-    gap: 50px;
-    margin-left: 500px;
-    margin-top: 80px; /*para achicar el espacio de abajo y quede al raz*/
-    font-size: 20px;
-    
+footer {
+  background-color: whitesmoke;
 }
 
-
-/* ponerle a la intro y en INFO color, margen y tamano mediano*/
-
-main{
-    display: flex; /*FUNCIONA PARA LOS CONTENEDORES*/
-    justify-content: left;
-    flex-wrap: wrap; /*que se adapte a estar en la misma linea o pase a columna si es necesario p mobile*/
-    background-color: antiquewhite;
-    align-items: center;
+header {
+  color: #ddd9d9;
+  display: flex; /*modificar su posicionamiento, el header en fila queda*/
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px; /*con este le doy espacio internamente, no usando margin*/
+}
+header .banner {
+  color: rgba(61, 13, 132, 0.736);
+  margin-left: 200px;
+  margin-top: 45px;
+  margin-bottom: 1%;
+}
+header nav {
+  display: flex; /* FUNCIONA PARA LOS CONTENEDORES*/
+  color: rgba(61, 13, 132, 0.736);
+  list-style: none;
+  gap: 50px;
+  margin-left: 500px;
+  margin-top: 80px; /*para achicar el espacio de abajo y quede al raz*/
+  font-size: 20px;
 }
 
-.contenido {
-    color: rgba(92, 43, 38, 0.8);
-    font-size: 21px;
-    
-    
-    display: flex;
-    
+main {
+  display: flex; /*FUNCIONA PARA LOS CONTENEDORES*/
+  justify-content: left;
+  flex-wrap: wrap; /*que se adapte a estar en la misma linea o pase a columna si es necesario p mobile*/
+  background-color: #ddd9d9;
+  align-items: center;
+}
+main .contenido {
+  color: rgba(92, 43, 38, 0.8);
+  font-size: 21px;
+  gap: 5%;
+  padding: 1%;
+  /*justify-content: center;*/
+}
+main .introduccion {
+  margin-top: 80px;
+  margin-bottom: 90px;
+  margin-left: 200px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+main .fotointro {
+  display: grid;
+  width: 40%;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0px;
 }
 
-/*este modifica el texto nada mas*/
-.introduccion {
-    margin-top: 80px;
-    margin-bottom: 90px;
-    margin-left: 200px;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, auto);
+footer {
+  color: rgba(61, 13, 132, 0.736);
+  font-size: 15px;
+  margin: 100px;
+  margin-bottom: 1%;
+  margin-top: 3%;
+  text-align: center;
 }
 
-/*imagen de escritorio home 1 - NO PUDE PONERLA AL LADO DEL TEXTO*/
-main .img {
- display: flex;
- align-items: center;
- justify-content:right;
-
+header {
+  color: #ddd9d9;
+  display: flex; /*modificar su posicionamiento, el header en fila queda*/
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px; /*con este le doy espacio internamente, no usando margin*/
+}
+header .banner {
+  color: rgba(61, 13, 132, 0.736);
+  margin-left: 200px;
+  margin-top: 45px;
+  margin-bottom: 1%;
+}
+header nav {
+  display: flex; /* FUNCIONA PARA LOS CONTENEDORES*/
+  color: rgba(61, 13, 132, 0.736);
+  list-style: none;
+  gap: 50px;
+  margin-left: 500px;
+  margin-top: 80px; /*para achicar el espacio de abajo y quede al raz*/
+  font-size: 20px;
 }
 
-main .img img{
-    width: 60%;
-    
+main {
+  margin: 200px;
+  margin-top: 75px;
+  margin-bottom: 0%;
+  color: rgba(92, 43, 38, 0.8);
+  font-size: 30px;
 }
-
-/*para: num, mail, direc (pag home) y contacto (pag servicios)*/
-
-footer h4 {
-    color: rgba(61, 13, 132, 0.736);
-    
-    font-size: 15px;
-    margin: 100px;
-    margin-bottom: 1%;
-    margin-top: 3%;
-    text-align:center;
-
-}
-
-/*para el subtitulo servicios y contacto - en la pag servicios y contacto*/
-main h2 {
-    margin: 200px;
-    margin-top: 75px;
-    margin-bottom: 0%;
-    color: rgba(92, 43, 38, 0.8);
-    font-size: 30px;
-}
-
-.grid-container {
+main .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
   gap: 50px;
@@ -125,29 +130,58 @@ main h2 {
   text-align: justify;
   line-height: 2; /* Esto es interlineado */
 }
-
-main .grid-container div span{
-    display: block;
-    color: rgba(92, 43, 38, 0.8);
-    margin-bottom: 15px; /*para separarlo del renglon de arriba*/
-    font-size: 24px;
-
+main main .grid-container div span {
+  display: block;
+  color: rgba(92, 43, 38, 0.8);
+  margin-bottom: 15px; /*para separarlo del renglon de arriba*/
+  font-size: 24px;
 }
 
 /* para el: por consulta contactanos, en la pagina de servicios*/
 footer h5 {
-    color: rgba(61, 13, 132, 0.736);
-    font-size: 20px;
-    margin-top: 1%;
-    margin-bottom: 0%;
-    text-align:center;
+  color: rgba(61, 13, 132, 0.736);
+  font-size: 20px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  text-align: center;
 }
 
-/*deco para la pag de contacto*/
+header {
+  color: #ddd9d9;
+  display: flex; /*modificar su posicionamiento, el header en fila queda*/
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px; /*con este le doy espacio internamente, no usando margin*/
+}
+header .banner {
+  color: rgba(61, 13, 132, 0.736);
+  margin-left: 200px;
+  margin-top: 45px;
+  margin-bottom: 1%;
+}
+header nav {
+  display: flex; /* FUNCIONA PARA LOS CONTENEDORES*/
+  color: rgba(61, 13, 132, 0.736);
+  list-style: none;
+  gap: 50px;
+  margin-left: 500px;
+  margin-top: 80px; /*para achicar el espacio de abajo y quede al raz*/
+  font-size: 20px;
+}
 
-.grid-dos-columnas {
+main {
+  margin: 200px;
+  margin-top: 75px;
+  margin-bottom: 0%;
+  color: rgba(92, 43, 38, 0.8);
+  font-size: 30px;
+  /* deco para los textos */
+  /* Foto de mapa que ocupa las 3 filas */
+  /* Celdas vacías para mantener la estructura */
+}
+main .grid-dos-columnas {
   display: grid;
-  grid-template-columns: 1fr 1fr;      /* dos columnas iguales */
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
   grid-template-rows: repeat(3, auto); /* tres filas */
   gap: 50px;
   margin-top: 45px;
@@ -156,58 +190,37 @@ footer h5 {
   margin-bottom: 150px;
   color: rgb(104, 78, 78);
   text-align: justify;
- 
 }
-
-/* deco para los textos */
-.item {
+main .item {
   font-size: 18px;
   padding: 10px;
   border-radius: 8px;
 }
-
-/* Foto de mapa que ocupa las 3 filas */
-.imagen {
-  grid-row: 1 / span 3; /* ocupa 3 filas */
+main .imagen {
+  grid-row: 1/span 3; /* ocupa 3 filas */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.imagen img {
+main .imagen img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
-
-/* Celdas vacías para mantener la estructura */
-.invisible {
+main .invisible {
   display: none;
 }
 
-
-
-/* ===== DISEÑO PARA CELULARES ===== */
 @media (max-width: 1024px) {
-
-  /* General */
   body {
     font-size: 16px;
     padding: 10px;
   }
-
   header {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
   }
-
-  .banner {
-    margin: 0;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   header nav ul {
     flex-direction: column;
     gap: 20px;
@@ -215,97 +228,75 @@ footer h5 {
     font-size: 18px;
     align-items: flex-start;
   }
-
+  .banner {
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   main {
     flex-direction: column;
     padding: 10px;
   }
-
-  .introduccion {
+  main .introduccion {
     margin: 40px 10px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     text-align: center;
   }
-
-  .contenido {
+  main .contenido {
     flex-direction: column;
     text-align: center;
     margin: 0 auto;
   }
-
   main .img {
     justify-content: center;
     margin: 20px auto;
   }
-
   main .img img {
     width: 90%;
   }
-
-
-
-  
-
-/*para: num, mail, direc (pag home) y contacto (pag servicios)*/
-
-h4 {
-    color: rgba(61, 13, 132, 0.736);
-    
-    font-size: 15px;
-    margin: 100px;
-    margin-bottom: 1%;
-    margin-top: 3%;
-    text-align:center;
-
-}
-
-/*para el subtitulo servicios y contacto - en la pag servicios y contacto*/
-h2 {
+  main h2 {
     margin: 200px;
     margin-top: 75px;
     margin-bottom: 0%;
     color: rgba(92, 43, 38, 0.8);
     font-size: 30px;
-}
-
-
- /* para el: por consulta contactanos, en la pagina de servicios*/
-h5 {
+  }
+  footer h4 {
+    color: rgba(61, 13, 132, 0.736);
+    font-size: 15px;
+    margin: 100px;
+    margin-bottom: 1%;
+    margin-top: 3%;
+    text-align: center;
+  }
+  footer h5 {
     color: rgba(61, 13, 132, 0.736);
     font-size: 20px;
     margin-top: 1%;
     margin-bottom: 0%;
-    text-align:center;
-}
-
-
-
-
+    text-align: center;
+  }
   .grid-container {
-    grid-template-columns: 1fr; /* 1 columna */
+    grid-template-columns: 1fr;
     margin: 20px;
     text-align: center;
   }
-
   .grid-dos-columnas {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     margin: 20px;
     text-align: center;
   }
-
   .imagen {
     grid-row: auto;
     order: 3;
     margin-top: 20px;
   }
-
   .imagen img {
     width: 100%;
     height: auto;
   }
-
   .item {
     font-size: 16px;
     padding: 8px;
@@ -313,3 +304,4 @@ h5 {
   }
 }
 
+/*# sourceMappingURL=style.css.map */

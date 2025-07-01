@@ -1,0 +1,51 @@
+//variables
+@import "../abstracts/variables";
+//mixin
+@import "../abstracts/mixin";
+
+header{
+    color: $color-banner;
+    @include flex;
+    padding-right: 30px;/*con este le doy espacio internamente, no usando margin*/
+    .banner{
+        color: $color-titulosysub;
+        margin-left: 200px;
+        margin-top: 45px;
+        margin-bottom: 1%;
+    }
+    nav {
+        @include estilos-header-div-nav ($color-titulosysub);
+    }
+}
+
+main{
+    @include h2 ($color-tipografia);
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+        gap: 50px;
+        margin-top: 45px;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-bottom: 150px;
+        color: $color-textos;
+        text-align: justify;
+        line-height: 2; /* Esto es interlineado */
+        }
+        
+    main .grid-container div span{
+        display: block;
+        color: $color-tipografia;
+        margin-bottom: 15px; /*para separarlo del renglon de arriba*/
+        font-size: 24px;
+        }
+}
+
+/* para el: por consulta contactanos, en la pagina de servicios*/
+footer h5 {
+    color: rgba(61, 13, 132, 0.736);
+    font-size: 20px;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    text-align:center;
+}

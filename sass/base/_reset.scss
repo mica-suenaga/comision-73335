@@ -1,0 +1,29 @@
+//variables
+@import "../abstracts/variables";
+
+/* selector + propiedad + valor
+
+selector {
+propiedad: valor
+}
+reset
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+/*estilos generales*/
+header{
+    background-color: $color-banner;
+}
+
+main{
+    background-color: $color-fondo;
+}
+
+footer{
+    background-color: whitesmoke;
+}
