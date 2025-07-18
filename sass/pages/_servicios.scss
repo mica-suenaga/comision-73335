@@ -19,18 +19,26 @@ header{
 }
 
 main{
+    h2{
+        margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    color: $color-tipografia;
+    font-size: 30px;
+    }
     @include h2 ($color-tipografia);
     .grid-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
-        gap: 50px;
-        margin-top: 45px;
-        margin-left: 200px;
-        margin-right: 200px;
-        margin-bottom: 150px;
-        color: $color-textos;
-        text-align: justify;
-        line-height: 2; /* Esto es interlineado */
+    grid-template-columns: 1fr; // ← SOLO UNA COLUMNA
+    gap: 50px;
+    margin-top: 45px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 150px;
+    color: $color-textos;
+    text-align: justify;
+    line-height: 2;
+    font-size: 18px;
         }
         
     main .grid-container div span{
@@ -41,6 +49,13 @@ main{
         }
 }
 
+.grid-container h3 {
+  color: $color-tipografia; 
+  margin-bottom: 15px;
+  font-size: 24px; 
+  font-weight: bold;
+}
+
 /* para el: por consulta contactanos, en la pagina de servicios*/
 footer h5 {
     color: rgba(61, 13, 132, 0.736);
@@ -48,4 +63,24 @@ footer h5 {
     margin-top: 1%;
     margin-bottom: 0%;
     text-align:center;
+}
+
+footer h4 {
+  font-size: 22px;
+  color: $color-tipografia; 
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+
+  a {
+    text-decoration: none;
+    color: $color-titulosysub; 
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
